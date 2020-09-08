@@ -29,5 +29,16 @@ public class AccountQuantityBank
 {
     public string Bank {get;set;}
     public int Quantity{get;set;}
+    
+    public override string ToString()
+    {
+        return $"{Bank} : {Quantity}";
+    }
 }
+```
+
+And the output is:
+
+```cmd
+
 ```
