@@ -13,9 +13,9 @@ var accountBanks = new List<AccountQuantityBank>
 };
 
 var stats = banks.Select(
-                        l => accountBanks
-                            .Where(r => r.Bank == l)
-                            .DefaultIfEmpty(new AccountQuantityBank{Bank = l, Quantity = 0})
+                        left => accountBanks
+                            .Where(r => r.Bank == left)
+                            .DefaultIfEmpty(new AccountQuantityBank{Bank = left, Quantity = 0})
                             .ToList()
                         )
                     .SelectMany(t =>t)
