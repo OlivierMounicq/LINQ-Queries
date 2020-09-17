@@ -46,3 +46,13 @@ var distinctPersonList = personList
                          )
                          .ToList();
 ```
+
+_or_
+
+```cs
+var distinctPersonList = personList
+			.GroupBy(p => new { p.FirstName, p.LastName, p.Country })
+			.Select(t => t.First())
+			.ToList();
+```
+
