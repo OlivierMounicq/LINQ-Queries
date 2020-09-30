@@ -43,7 +43,7 @@ Let ```cityList``` a list of city and ```deparmentList``` a department list.
 
 ```cs
 var selectedList = cityList
-			.Select(c => new { City = c.Name, Department = departmentList.Where(d => d.Code == c.DepartmentCode).FirstOrDefault()?.Name })
-			.ToList();
+		.Select(c => new { City = c.Name, Department = departmentList.Where(d => d.Code == c.DepartmentCode).FirstOrDefault()?.Name })
+		.ToList();
 ```          
           
