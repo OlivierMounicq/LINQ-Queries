@@ -38,8 +38,10 @@ public class Department
 }
 ```
 
-Let ```cityList``` a list of city and ```deparmentList``` a department list. 
+Let ```cityList``` a list of city and ```deparmentList``` a department list. And we want to perform a join between the city list and the department list.  
+We test two ways to perform the join :
 
+#### Way 1 : the select and where 
 
 ```cs
 var selectedList = cityList
@@ -47,3 +49,16 @@ var selectedList = cityList
 		.ToList();
 ```          
           
+#### Way 2 : we use a join
+
+
+```cs
+var selectedList2 = cityList.Join(
+                        departmentList,
+                        c => c.DepartmentCode,
+                        d => d.Code,
+                        (key, g) => new { City = key.Name, Department = g.Name }
+                    )
+                    .ToList();
+```
+
