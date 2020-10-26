@@ -1,6 +1,6 @@
 ## Left Outer Join
 
-We use the DefaultIfEmpty
+We use the __DefaultIfEmpty__ keyword.
 
 ```cs
 var banks = new List<string>{"BNP", "NATIXIS", "BPCE", "CACIB", "SGCIB"};
