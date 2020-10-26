@@ -62,3 +62,4 @@ var selectedList2 = cityList.Join(
                     .ToList();
 ```
 
+[Code source to get the statistical data](https://github.com/OlivierMounicq/JoinVersusSelectWhere)
